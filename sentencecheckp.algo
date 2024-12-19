@@ -1,0 +1,29 @@
+ALGORITHM sentence
+VAR
+    len : INTEGER;
+    vwc : INTEGER;
+    sent : STRING;
+    ch : CHAR;
+    words : INTEGER;
+
+BEGIN
+    len := 0
+    vw := {"a","e","i","o","u","A","E","I","o","U"}
+    sent := "this my algorithm checkpoint."
+    vwc := 0
+
+    FOR ch in sent DO
+        IF (ch != ".") THEN
+            len = len + 1
+        END_IF
+        IF (ch = " ") THEN
+            words = words + 1 
+        END_IF
+        IF (ch = vw) THEN
+            vwc = vwc + 1
+        END_IF
+    END_FOR
+
+    Write(vwc,len,words)
+
+END
